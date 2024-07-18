@@ -1,0 +1,189 @@
+{% load static %}
+<main class="bg-body-tertiary p-5 rounded" style="height: 50% !important;">
+    <div>
+        <div class="row header">
+            <h1 style="font-family: 'Besley' !important; font-style: italic;">Pick your <span
+                    class="fw-bold abt-bini-text"
+                    style="font-family: 'Roboto', normal !important; font-size: 3.5rem !important; font-style: normal !important;">BIAS!</span>
+            </h1>
+            <img class="diamond-arrow" src="{% static 'media/img/cabinets/arrow.png' %}" alt="Brand">
+        </div>
+        <div class="card-container px-5">
+            <div class="arrow left-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                    class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                </svg>
+            </div>
+            <div class="arrow right-arrow" style="z-index: 3;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                    class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                </svg>
+            </div>
+            <div class="cards">
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front bias-aiah">
+                        <img src="{% static 'media/img/cabinets/aiah.png' %}" alt="Front Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                    <div class="card-back bias-aiah">
+                        <div class="aiah-facecard-ov-color card-text-overlay position-absolute bottom-0 start-0 p-3 text-white" style="padding: 1.5em;">
+                            <div class="txt-box">
+                                <div class="col-auto desc-txt">
+                                    <p class="m-0 p-0">BINI</p>
+                                    <p class="m-0 p-0">AIAH</p>
+                                    <p class="small mb-0">Mariah Queen Arceta<br>January 27, 2001</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="{% static 'media/img/bini-aiah.webp' %}" alt="Back Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front bias-colet">
+                        <img src="{% static 'media/img/cabinets/colet.png' %}" alt="Front Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                    <div class="card-back bias-colet">
+                        <div class="colet-facecard-ov-color card-text-overlay position-absolute bottom-0 start-0 p-3 text-white"
+                            style="padding: 1.5em;">
+                            <div class="txt-box">
+                                <div class="col-auto desc-txt">
+                                    <p class="m-0 p-0">BINI</p>
+                                    <p class="m-0 p-0">COLET</p>
+                                    <p class="small mb-0">Ma. Nicolette Vergara<br>September 14, 2001</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="{% static 'media/img/bini-colet.webp' %}" alt="Back Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front bias-maloi">
+                        <img src="{% static 'media/img/cabinets/maloi.png' %}" alt="Front Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                    <div class="card-back bias-maloi">
+                        <div class="maloi-facecard-ov-color card-text-overlay position-absolute bottom-0 start-0 p-3 text-white"
+                            style="padding: 1.5em;">
+                            <div class="txt-box">
+                                <div class="col-auto desc-txt">
+                                    <p class="m-0 p-0">BINI</p>
+                                    <p class="m-0 p-0">MALOI</p>
+                                    <p class="small mb-0">Mary Loi Yves Ricalde<br>May 27, 2002</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="{% static 'media/img/bini-maloi.webp' %}" alt="Back Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front bias-stacey">
+                        <img src="{% static 'media/img/cabinets/stacey.png' %}" alt="Front Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                    <div class="card-back bias-stacey">
+                        <div class="stacey-facecard-ov-color card-text-overlay position-absolute bottom-0 start-0 p-3 text-white"
+                            style="padding: 1.5em;">
+                            <div class="txt-box">
+                                <div class="col-auto desc-txt">
+                                    <p class="m-0 p-0">BINI</p>
+                                    <p class="m-0 p-0">STACEY</p>
+                                    <p class="small mb-0">Stacey Aubrey Sevilleja<br>July 13, 2003</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="{% static 'media/img/bini-stacey.webp' %}" alt="Back Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front bias-mikha">
+                        <img src="{% static 'media/img/cabinets/mikha.png' %}" alt="Front Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                    <div class="card-back bias-mikha">
+                        <div class="mikha-facecard-ov-color card-text-overlay position-absolute bottom-0 start-0 p-3 text-white"
+                            style="padding: 1.5em;">
+                            <div class="txt-box">
+                                <div class="col-auto desc-txt">
+                                    <p class="m-0 p-0">BINI</p>
+                                    <p class="m-0 p-0">MIKHA</p>
+                                    <p class="small mb-0">Mikhaela Janna Lim<br>November 8, 2003</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="{% static 'media/img/bini-mikha.webp' %}" alt="Back Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front bias-jhoanna">
+                        <img src="{% static 'media/img/cabinets/jho.png' %}" alt="Front Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                    <div class="card-back bias-jhoanna">
+                        <div class="jhoanna-facecard-ov-color card-text-overlay position-absolute bottom-0 start-0 p-3 text-white"
+                            style="padding: 1.5em;">
+                            <div class="txt-box">
+                                <div class="col-auto desc-txt">
+                                    <p class="m-0 p-0">BINI</p>
+                                    <p class="m-0 p-0">JHOANNA</p>
+                                    <p class="small mb-0">Jhoanna Christine Robles<br>January 26, 2004</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="{% static 'media/img/bini-jhoanna.webp' %}" alt="Back Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front bias-sheena">
+                        <img src="{% static 'media/img/cabinets/sheena.png' %}" alt="Front Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                    <div class="card-back bias-sheena">
+                        <div class="sheena-facecard-ov-color card-text-overlay position-absolute bottom-0 start-0 p-3 text-white"
+                            style="padding: 1.5em;">
+                            <div class="txt-box">
+                                <div class="col-auto desc-txt">
+                                    <p class="m-0 p-0">BINI</p>
+                                    <p class="m-0 p-0">SHEENA</p>
+                                    <p class="small mb-0">Sheena Mae Catacutan<br>May 9, 2004</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="{% static 'media/img/bini-sheena.webp' %}" alt="Back Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-front bias-gwen">
+                        <img src="{% static 'media/img/cabinets/gwen.png' %}" alt="Front Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                    <div class="card-back bias-gwen">
+                        <div class="gwen-facecard-ov-color card-text-overlay position-absolute bottom-0 start-0 p-3 text-white"
+                            style="padding: 1.5em;">
+                            <div class="txt-box">
+                                <div class="col-auto desc-txt">
+                                    <p class="m-0 p-0">BINI</p>
+                                    <p class="m-0 p-0">GWEN</p>
+                                    <p class="small mb-0">Gweneth L. Apuli<br>June 19, 2003</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="{% static 'media/img/bini-gwen.webp' %}" alt="Back Image"
+                            style="border-radius: 5% !important;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

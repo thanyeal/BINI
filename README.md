@@ -1,0 +1,3 @@
+# BINI
+A cloned prototype of BINI's official website that showcases unique aspects created by UI/UX Designer Ms. Juno Sevilla, who redesigned the previous website into a more fancy themed one, resulting in a fresh view and sweet looking site dedicated to displaying prospective improvements to the official site.   
+I made this website to demonstrate my skill set as a Frontend Developer and to improve my expertise to programming languages such as HTML5, CSS3, and JavaScript.

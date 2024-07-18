@@ -1,0 +1,126 @@
+{% load static %}
+<main class="container p-3">
+    <div class="row header justify-content-center">
+        <h1 class="fw-bold" style="font-family: 'Roboto', normal !important; font-size: 3.5rem !important; font-style: normal !important;">
+            Photo Gallery
+        </h1>
+        <img class="cherry" src="{% static 'media/img/cabinets/cherry.png' %}" alt="Brand">
+    </div>
+    <div class="gallery-items">
+        <!-- Page 1 Items -->
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/cm-aiah.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/cm-maloi.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/cm-stacey.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/cm-colet.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 rm-mt">
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/cm-sheena.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/cm-mikha.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/cm-gwen.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/cm-jho.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+        </div>
+        <!-- Page 2 Items -->
+        <div class="row mt-4 rm-mt">
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/gp-1.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/gp-2.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/gp-3.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/gp-4.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 rm-mt">
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/gp-5.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/gp-6.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/gp-7.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="gallery-card">
+                    <img src="{% static 'media/img/gallery/gp-8.jpg' %}" class="card-img-top img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="pagination d-flex justify-content-center">
+            <div class="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                </svg>
+            </div>
+            <div class="page">Page <span class="page-num"></span></div>
+            <div class="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade custom-modal" id="imageModal" tabindex="-1" aria-hidden="true">
+        <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Modal Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

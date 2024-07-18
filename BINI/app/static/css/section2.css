@@ -1,0 +1,382 @@
+
+/** about us */
+#about {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.about-header {
+    font-family: 'Besley' !important;
+    font-style: italic; position: relative;
+}
+
+.abt-bini-text {
+    background: linear-gradient(to right, #ffaad9, #008c8c);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Roboto', normal !important;
+    font-size: 3.5rem !important;
+    font-style: normal !important;
+}
+
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15vw; 
+}
+
+.about-us .about-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.about-us img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.about-us h2 {
+    color: #000;
+}
+
+.about-us h5 {
+    color: #000;
+    margin-bottom: 0; /* Remove default margin */
+    line-height: 1.5;
+}
+
+.about-image {
+    flex: 0 0 25vw; /* Fixed width for the image */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.the-flower {
+    position: absolute;
+    top: 0;
+    left: 13vw;
+}
+
+.the-bubbles {
+    position: absolute;
+    right: 1vw;
+    width: 25vw;
+    height: 50vh;
+    filter: blur(3px);
+    opacity: 0.5;
+    bottom: -100%;
+    z-index: 90;
+}
+
+.the-heart-colored {
+    position: absolute;
+    left: -5vw;
+    width: 22vw;
+    height: 40vh;
+    filter: blur(3px);
+    bottom: -105%;
+}
+
+
+/*blur backdrop sa bini about pic*/
+.about-image-wrapper {
+    position: relative;
+    display: inline-block; /* Adjust based on your layout */
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(3em); /* Adjust the blur level as needed */
+}
+
+.circle1 {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 0, 0, 0.5); /* Red circle */
+    top: 20px;
+    left: -10px;
+}
+
+.circle2 {
+    width: 450px;
+    height: 450px;
+    background-color: rgba(255, 174, 0, 0.5); /* Green circle */
+    bottom: -115px;
+    left: 90px;
+}
+
+.circle3 {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 119, 255, 0.5); /* Blue circle */
+    top: 110px;
+    left: 100px;
+}
+
+.about-image {
+    position: relative;
+    z-index: 10; /* Ensure the image is above the circles */
+}
+
+.about-image img {
+    display: block;
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+}
+
+
+/* Media Query */
+
+/* xs device */
+@media only screen and (max-width: 600px){
+    .about-us {
+        padding: 0;
+    }
+
+    .the-bubbles ,
+    .the-heart-colored,
+    .about-image-wrapper,
+    .about-image,
+    .the-flower {
+        display: none;
+    }
+    .about-desc {
+        text-align: justify;
+    }
+}
+/* s device */
+@media only screen and (min-width: 601px){
+    .about-us {
+        padding: 1rem;
+    }
+    .about-desc {
+        text-align: justify;
+        z-index: 20;
+    }
+    .the-flower {
+        display: content;
+        position: absolute;
+        left: 14rem;
+    }
+    .the-bubbles {
+        position: absolute;
+        right: 1rem;
+        width: 15rem;
+        height: auto;
+        filter: blur(3px);
+        opacity: 0.5;
+        bottom: -80%;
+        z-index: 19;
+    }
+    .about-image {
+        display: none;
+    }
+    .the-heart-colored {
+        position: absolute;
+        left: -5vw;
+        width: 20rem;
+        height: auto;
+        filter: blur(5px);
+        bottom: -97%;
+        opacity: 0.8;
+        z-index: 0;
+    }
+    .about-image-wrapper {
+        display: none;
+    }
+}
+/* m device */
+@media only screen and (min-width: 768px){
+    .the-flower {
+        display: content;
+        position: absolute;
+        left: 15rem;
+    }
+}
+/* l device */
+@media only screen and (min-width: 992px){
+    .the-heart-colored {
+        position: absolute;
+        left: -5vw;
+        width: 20rem;
+        height: auto;
+        filter: blur(5px);
+        bottom: -110%;
+        opacity: 0.8;
+    }
+    .the-bubbles {
+        position: absolute;
+        right: 1rem;
+        width: 20rem;
+        height: auto;
+        filter: blur(3px);
+        opacity: 0.5;
+        bottom: -90%;
+        z-index: 19;
+    }
+    .about-image {
+        flex: 0 0 25vw; /* Fixed width for the image */
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 21;
+    }
+}
+/* xl device */
+@media only screen and (min-width: 1300px){
+    .the-bubbles {
+        position: absolute;
+        right: 1rem;
+        width: 20rem;
+        height: auto;
+        filter: blur(3px);
+        opacity: 0.3;
+        bottom: -90%;
+        z-index: 22;
+    }
+    .about-image {
+        flex: 0 0 25vw; /* Fixed width for the image */
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 21;
+    }
+}
+/* pc device */
+@media only screen and (min-width: 1500px){
+
+    #about {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .about-header {
+        font-family: 'Besley' !important;
+        font-style: italic; position: relative;
+    }
+    .abt-bini-text {
+        background: linear-gradient(to right, #ffaad9, #008c8c);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: 'Roboto', normal !important;
+        font-size: 3.5rem !important;
+        font-style: normal !important;
+    }
+    .about-us {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15vw; 
+    }
+    .about-us .about-content {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .about-us img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .about-us h2 {
+        color: #000;
+    }
+    .about-us h5 {
+        color: #000;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+    .about-image {
+        flex: 0 0 25vw;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .the-flower {
+        position: absolute;
+        top: 0;
+        left: 13vw;
+    }
+    
+    .the-bubbles {
+        position: absolute;
+        right: 3rem;
+        width: 25rem;
+        height: auto;
+        filter: blur(3px);
+        opacity: 0.5;
+        bottom: -90%;
+        z-index: 22;
+    }
+    .the-heart-colored {
+        position: absolute;
+        left: -3vw;
+        width: 22rem;
+        height: auto;
+        filter: blur(3px);
+        bottom: -100%;
+    }
+
+    /*blur backdrop sa bini about pic*/
+    .about-image-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(3em);
+    }
+    .circle1 {
+        width: 250px;
+        height: 250px;
+        background-color: rgba(255, 0, 0, 0.5);
+        top: 20px;
+        left: -10px;
+    }
+    .circle2 {
+        width: 450px;
+        height: 450px;
+        background-color: rgba(255, 174, 0, 0.5);
+        bottom: -115px;
+        left: 90px;
+    }
+    .circle3 {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(0, 119, 255, 0.5);
+        top: 110px;
+        left: 100px;
+    }
+    .about-image {
+        position: relative;
+        z-index: 10;
+    }
+    .about-image img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}

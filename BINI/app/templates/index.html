@@ -1,0 +1,249 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINI | (Not Official Site)</title>
+    <link rel="icon" href="{% static 'media/bini.png' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="https://fonts.googleapis.com/css?family=Figtree" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Besley" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+    <link href="{% static 'css/resp-width.css' %}" rel="stylesheet">
+    <link href="{% static 'css/resp-height.css' %}" rel="stylesheet">
+    <link href="{% static 'css/section1.css' %}" rel="stylesheet">
+    <link href="{% static 'css/section2.css' %}" rel="stylesheet">
+    <link href="{% static 'css/section3.css' %}" rel="stylesheet">
+    <link href="{% static 'css/section4.css' %}" rel="stylesheet">
+    <link href="{% static 'css/section5.css' %}" rel="stylesheet">
+    <link href="{% static 'css/section6.css' %}" rel="stylesheet">
+    <link href="{% static 'css/section7.css' %}" rel="stylesheet">
+    <link href="{% static 'css/footer.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="loader" id="loader">
+        {% include 'partials/loader.html' %}
+    </div>
+    <main id="main-contentz" style="overflow-x: hidden;">
+        <video autoplay muted loop id="background-video">
+            {% include 'partials/video.html' %}
+        </video>
+        <nav id="navbar" class="navbar navbar-expand-md rounded-navbar transparentt" style="z-index: 9999;">
+            {% include 'partials/navbar.html' %}
+        </nav>
+        <section id="main-pager" class="transparent-page" alt="section1">
+            {% include 'sections/section1.html' %}
+        </section>
+        <section id="about" class="content-section">
+            {% include 'sections/section2.html' %}
+        </section>
+        <section id="about" class="content-section" style="margin-bottom: 0 !important;  padding-bottom: 0 !important;">
+            {% include 'sections/section3.html' %}
+        </section>
+        <section id="music" class="content-section">
+            {% include 'sections/section4.html' %}
+        </section>
+        <section id="videos" class="content-section">
+            {% include 'sections/section5.html' %}
+        </section>
+        <section id="gallery" class="content-section pg">
+            {% include 'sections/section6.html' %}
+        </section>
+        <section id="events" class="content-section">
+            {% include 'sections/section7.html' %}
+        </section>
+        <section class="bg-body-tertiary p-5" style="padding-bottom: 10% !important;">
+            {% include 'sections/section8.html' %}
+        </section>
+        <footer class="container-fluid bg-bini text-white py-5 text-center">
+            {% include 'partials/footer.html' %}
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{% static 'dist/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- LOADER -->
+    <script>
+        $(document).ready(function(){
+            var star_y = $('#star-y');
+            var star_w = $('#star-w');
+            var bini_one = $('#bini-one');
+            var bini_two = $('#bini-two');
+
+            $('#slider').on('input change', function() {
+                var value = $(this).val();
+
+                // Calculate scale and opacity based on slider value
+                var scale2 = Math.min(2.5, 1 + value / 50);  // Limit scale2 to a maximum of 2
+                var scale3 = Math.min(3.5, 1 + value / 40);  // Limit scale3 to a maximum of 3
+                var opacity3 = Math.max(0.5, 1 - value / 100); // Limit minimum opacity to 0.5
+
+                // Update styles of the circles
+                if (value > 0) {
+                    star_w.hide();
+                    star_y.show();
+                    bini_one.removeClass('removez');
+                    bini_two.removeClass('removez');
+                } 
+                else {
+                    star_y.hide();
+                    star_w.show();
+                    bini_one.addClass('removez');
+                    bini_two.addClass('removez');
+                }
+
+                $('#circlez2').css('transform', `scale(${scale2})`);
+                $('#circlez3').css({
+                    'transform': `scale(${scale3})`,
+                    'opacity': opacity3
+                });
+
+                // Check if slider reached the maximum value
+                if (value == 100) {
+                    $('.loader').fadeOut(1000, function() {
+                        $('#main-contentz').fadeIn(1000);
+                    });
+                } 
+                else {
+                    $('#main-contentz').hide();
+                    $('.loader').show();
+                }
+            });
+        });
+    </script>
+
+    <!-- GALLERY MODAL -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".gallery-card img");
+            const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+            const modalImage = document.getElementById("modalImage");
+            images.forEach(image => {
+                image.addEventListener("click", function () {
+                    modalImage.src = this.src;
+                    modal.show();
+                });
+            });
+        });
+    </script>
+
+    <!-- BIAS - PREV AND NXT -->
+    <script>
+        const galleryItems = document.querySelectorAll(".gallery-items .row");
+        const prev = document.querySelector(".prev");
+        const next = document.querySelector(".next");
+        const page = document.querySelector(".page-num");
+        const maxItem = 8;
+        let index = 1;
+
+        const pagination = Math.ceil(galleryItems.length * 4 / maxItem); // 4 items per row, multiple rows
+        console.log(pagination);
+
+        prev.addEventListener("click", function () {
+            index--;
+            check();
+            showItems();
+        });
+
+        next.addEventListener("click", function () {
+            index++;
+            check();
+            showItems();
+        });
+
+        function check() {
+            if (index == pagination) {
+                next.classList.add("disabled");
+            } else {
+                next.classList.remove("disabled");
+            }
+
+            if (index == 1) {
+                prev.classList.add("disabled");
+            } else {
+                prev.classList.remove("disabled");
+            }
+        }
+
+        function showItems() {
+            for (let i = 0; i < galleryItems.length; i++) {
+                galleryItems[i].classList.remove("show");
+                galleryItems[i].classList.add("hide");
+                if (i >= (index * maxItem / 4) - (maxItem / 4) && i < index * (maxItem / 4)) {
+                    galleryItems[i].classList.remove("hide");
+                    galleryItems[i].classList.add("show");
+                }
+                page.innerHTML = index;
+            }
+        }
+
+        window.onload = function () {
+            showItems();
+            check();
+        }
+    </script>
+
+    <!-- X-SCROLL -->
+    <script>
+        const wrapper = document.querySelector('.cards')
+        let pressed = false
+        let startX = 0
+        wrapper.addEventListener('mousedown', function (e) {
+            pressed = true
+            startX = e.clientX
+            this.style.cursor = 'grabbing'
+        })
+        wrapper.addEventListener('mouseleave', function (e) {
+            pressed = false
+        })
+        window.addEventListener('mouseup', function (e) {
+            pressed = false
+            wrapper.style.cursor = 'grab'
+        })
+        wrapper.addEventListener('mousemove', function (e) {
+            if(!pressed) {
+                return
+            }
+            this.scrollLeft += startX - e.clientX
+        })
+    </script>
+
+    <!-- NAVBAR -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    navbar.classList.add('scrolledz');
+                } else {
+                    navbar.classList.remove('scrolledz');
+                }
+            });
+        });
+    </script>
+
+    <!-- BIAS -->
+    <script>
+        document.querySelector('.left-arrow').addEventListener('click', () => {
+            const cards = document.querySelector('.cards');
+            cards.scrollLeft -= 1000;
+        });
+
+        document.querySelector('.right-arrow').addEventListener('click', () => {
+            const cards = document.querySelector('.cards');
+            cards.scrollLeft += 1000;
+        });
+
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
+    </script>
+
+</body>
+</html>

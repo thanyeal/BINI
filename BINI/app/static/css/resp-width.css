@@ -1,0 +1,59 @@
+/* xs device */
+@media only screen and (max-width: 600px){
+    .ghost {
+        display: none;
+    }
+}
+/* s device */
+@media only screen and (min-width: 601px){
+    .ghost {
+        display: none;
+    }
+}
+/* m device */
+@media only screen and (min-width: 768px){
+    .ghost {
+        display: none;
+    }
+}
+/* l device */
+@media only screen and (min-width: 992px){
+    .ghost {
+        display: none;
+    }
+}
+/* xl device */
+@media only screen and (min-width: 1200px){
+    .ghost {
+        display: contents;
+    }
+}
+/* pc device */
+@media only screen and (min-width: 1500px){
+    .ghost {
+        display: contents;
+    }
+}
+
+
+/* video done */
+
+/* navbar done */
+
+/* transparent done */
+
+/* about section */
+
+/* picking bias section */
+
+/* latest release section */
+
+/* youtube section */
+
+/* photo gallery section */
+
+/* events section */
+
+/* newsletter section */
+
+/* footer section */

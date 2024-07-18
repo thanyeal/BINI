@@ -1,0 +1,383 @@
+
+/* pick you bias header styling */
+.header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #333;
+    z-index: 1;
+}
+
+/* Card container styling */
+
+.card-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 50px;
+}
+
+/* Arrow styling */
+.arrow {
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+    padding: 0 3rem;
+    top: 45%;
+}
+.left-arrow {
+    position: absolute;
+    left: 4rem;
+    background-color: transparent;
+    color: white;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 4rem;
+    background-color: transparent;
+    color: white;
+}
+
+/* Cards styling */
+
+.card-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 5rem;
+}
+
+.cards {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scroll-snap-type: x;
+    cursor: grab;
+    scrollbar-width: none; /* for firefox */
+}
+.cards::-webkit-scrollbar { /* for chrome */
+    display: none;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 24rem;
+    height: 26rem;
+    margin: 0 0.5vw;
+    perspective: 100% !important;
+    cursor: pointer;
+    position: relative;
+    border: none !important;
+}
+
+
+.card-front, .card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.card-front img, .card-back img {
+    width: 20vw;
+}
+
+.card-front {
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card.flipped .card-back {
+    transform: rotateY(0deg);
+}
+
+/*card back and front shadow*/
+
+.bias-aiah {
+    border-radius: 2rem; 
+    box-shadow: 0 1vw 3vh rgba(0, 255, 234, 0.3);
+}
+.bias-colet {
+    border-radius: 2rem;
+    box-shadow: 0 1vw 3vh rgba(5, 146, 0, 0.3);
+}
+.bias-maloi {
+    border-radius: 2rem;
+    box-shadow: 0 1vw 3vh rgba(146, 136, 0, 0.3);
+}
+.bias-stacey {
+    border-radius: 2rem;
+    box-shadow: 0 1vw 3vh rgba(214, 94, 214, 0.3);
+}
+.bias-mikha {
+    border-radius: 2rem; 
+    box-shadow: 0 1vw 3vh rgba(146, 0, 0, 0.3);
+}
+.bias-jhoanna {
+    border-radius: 2rem; 
+    box-shadow: 0 1vw 3vh rgba(0, 58, 146, 0.3);
+}
+.bias-sheena {
+    border-radius: 2rem; 
+    box-shadow: 0 1vw 3vh rgba(57, 0, 110, 0.3);
+}
+.bias-gwen {
+    border-radius: 2rem; 
+    box-shadow: 0 1vw 3vh rgba(255, 145, 0, 0.3);
+}
+
+.diamond-arrow {
+    position: absolute;
+    width: 5rem;
+    right: 37%;
+    padding-top: 2rem;
+    bottom: auto;
+}
+
+.desc-txt p:nth-child(2) {
+    font-family: 'Playfair Display', serif !important; 
+    font-style: italic !important; 
+    font-size: 4rem; 
+    font-weight: 100 !important; 
+    line-height: 1; 
+    margin-top: -0.2em !important;
+}
+
+
+/* Fading effect on the sides // Select your BIAs */
+
+.card-container::before,
+.card-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5vw;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-container::before {
+    left: 0;
+    background: linear-gradient(to right,
+    rgba(255, 255, 255, 1), 
+    rgba(255, 255, 255, 0));
+}
+
+.card-container::after {
+    right: 0;
+    background: linear-gradient(to left, 
+    rgba(255, 255, 255, 1), 
+    rgba(255, 255, 255, 0));
+}
+
+
+/* face cards entity */
+
+.txt-box {
+    padding-top: 7vh;
+    padding-left: 3vh;
+}
+.card-text-overlay {
+    border-radius: 7%;
+    width: 100% !important;
+    height: 60%;
+    padding: 1.5em;
+}
+.aiah-facecard-ov-color {
+    background: linear-gradient(
+        to top,
+        rgba(92, 185, 199, 0.5) 0%, 
+        rgba(146, 199, 205, 0) 100%
+    );
+}
+.colet-facecard-ov-color {
+    background: linear-gradient(
+        to top,
+        rgba(32, 153, 121, 0.5) 0%, 
+        rgba(146, 199, 205, 0) 100%
+    );
+}
+.maloi-facecard-ov-color {
+    background: linear-gradient(
+        to top,
+        rgba(199, 187, 111, 0.5) 0%, 
+        rgba(146, 199, 205, 0) 100%
+    );
+}
+.stacey-facecard-ov-color {
+    background: linear-gradient(
+        to top,
+        rgba(253, 145, 178, 0.5) 0%, 
+        rgba(146, 199, 205, 0) 100%
+    );
+}
+.mikha-facecard-ov-color {
+    background: linear-gradient(
+        to top,
+        rgba(201, 0, 37, 0.5) 0%, 
+        rgba(146, 199, 205, 0) 100%
+    );
+}
+.jhoanna-facecard-ov-color {
+    background: linear-gradient(
+        to top,
+        rgba(0, 156, 223, 0.5) 0%, 
+        rgba(146, 199, 205, 0) 100%
+    );
+}
+.sheena-facecard-ov-color {
+    background: linear-gradient(
+        to top,
+        rgba(99, 52, 170, 0.5) 0%, 
+        rgba(146, 199, 205, 0) 100%
+    );
+}
+.gwen-facecard-ov-color {
+    background: linear-gradient(
+        to top,
+        rgba(247, 155, 90, 0.5) 0%, 
+        rgba(146, 199, 205, 0) 100%
+    );
+}
+
+/* xs device */
+@media only screen and (max-width: 1300px){
+    .diamond-arrow {
+        display: none;
+    }
+    .card-container::before,
+    .card-container::after {
+        display: content;
+    }
+    .card-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding: 0 50px;
+    }
+    .arrow {
+        cursor: pointer;
+        user-select: none;
+        z-index: 1;
+        padding: 0 0.5rem;
+        top: 45%;
+    }
+    .card-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+    }
+    .bias-aiah img,
+    .bias-colet img,
+    .bias-maloi img,
+    .bias-stacey img,
+    .bias-mikha img,
+    .bias-jhoanna img,
+    .bias-sheena img,
+    .bias-gwen img {
+        width: 100%;
+    }
+    .desc-txt p:nth-child(2) {
+        font-family: 'Playfair Display', serif !important; 
+        font-style: italic !important; 
+        font-size: 4rem; 
+        font-weight: 100 !important; 
+        line-height: 1; 
+        margin-top: -0.2em !important;
+    }
+    .desc-txt p:nth-child(1),
+    .desc-txt p:nth-child(3) {
+        font-size: 1rem; 
+    }
+}
+
+@media only screen and (min-width: 1301px){
+    .diamond-arrow {
+        display: none;
+    }
+    .cards {
+        cursor: auto;
+    }
+    .card-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding: 0 50px;
+    }
+    .arrow {
+        cursor: pointer;
+        user-select: none;
+        z-index: 1;
+        padding: 0 0.5rem;
+        top: 45%;
+    }
+    .card-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+    }
+    .bias-aiah img,
+    .bias-colet img,
+    .bias-maloi img,
+    .bias-stacey img,
+    .bias-mikha img,
+    .bias-jhoanna img,
+    .bias-sheena img,
+    .bias-gwen img {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .diamond-arrow {
+        display: block;
+        right: 32%;
+    }
+}
+
+
+@media only screen and (min-width: 1466px){
+    .diamond-arrow {
+        display: block;
+        right: 32%;
+    }
+}
+@media only screen and (min-width: 1566px){
+    .diamond-arrow {
+        display: block;
+        right: 32%;
+    }
+}
+@media only screen and (min-width: 1666px){
+    .diamond-arrow {
+        display: block;
+        right: 32%;
+    }
+}
+
+@media only screen and (min-width: 1700px){
+    .diamond-arrow {
+        display: block;
+        right: 37%;
+    }
+}

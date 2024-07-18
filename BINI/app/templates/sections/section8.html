@@ -1,9 +1,23 @@
 {% load static %}
-<div class="container" style="margin-top: 10rem;">
+<style>
+    .newsletter-h1 {
+        font-family: 'Playfair Display', serif !important; 
+        font-style: italic !important; 
+        font-size: 2rem; 
+        font-weight: 100 !important; 
+        line-height: 1; 
+        margin-top: -0.2em !important;
+    }
+    @media only screen and (max-width: 600px){
+        .newsletter-h1 {
+            font-size: 1rem; 
+        }
+    }    
+</style>
+<div class="container" style="margin-top: 3rem;">
     <div class="row">
         <div class="col-lg-5">
-            <h1
-                style="font-family: 'Playfair Display', serif !important; font-style: italic !important; font-size: 1.6vw; font-weight: 100 !important; line-height: 1; margin-top: -0.2em !important;">
+            <h1 class="newsletter-h1">
                 Stay updated with
             </h1>
             <h1 class="fw-bold"
@@ -15,7 +29,7 @@
         </div>
         <div class="col-lg-1"></div>
         <div class="col-lg-6 py-5 mt-4">
-            <div class="form-group mb-3 d-flex">
+            <div class="form-group mb-3 d-flex footer-link-nav-adjust">
                 <input type="email" class="form-control custom-input" id="emailInput"
                     placeholder="This website is not accepting any information">
                 <button type="button" class="mx-3 btn btn-bini btn-md  px-5">

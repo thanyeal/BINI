@@ -24,6 +24,14 @@
     <link href="{% static 'css/section6.css' %}" rel="stylesheet">
     <link href="{% static 'css/section7.css' %}" rel="stylesheet">
     <link href="{% static 'css/footer.css' %}" rel="stylesheet">
+    <style>
+        @media only screen and (max-width: 600px){
+            .footer-link-nav-adjust {
+                justify-content: center !important;
+                align-items: center !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="loader" id="loader">
@@ -39,27 +47,29 @@
         <section id="main-pager" class="transparent-page" alt="section1">
             {% include 'sections/section1.html' %}
         </section>
-        <section id="about" class="content-section">
-            {% include 'sections/section2.html' %}
-        </section>
-        <section id="about" class="content-section" style="margin-bottom: 0 !important;  padding-bottom: 0 !important;">
-            {% include 'sections/section3.html' %}
-        </section>
-        <section id="music" class="content-section">
-            {% include 'sections/section4.html' %}
-        </section>
-        <section id="videos" class="content-section">
-            {% include 'sections/section5.html' %}
-        </section>
-        <section id="gallery" class="content-section pg">
-            {% include 'sections/section6.html' %}
-        </section>
-        <section id="events" class="content-section">
-            {% include 'sections/section7.html' %}
-        </section>
-        <section class="bg-body-tertiary p-5" style="padding-bottom: 10% !important;">
-            {% include 'sections/section8.html' %}
-        </section>
+        <div style="background-color: white !important;">
+            <section id="about" class="content-section">
+                {% include 'sections/section2.html' %}
+            </section>
+            <section id="about" class="content-section" style="margin-bottom: 0 !important;  padding-bottom: 0 !important;">
+                {% include 'sections/section3.html' %}
+            </section>
+            <section id="music" class="content-section">
+                {% include 'sections/section4.html' %}
+            </section>
+            <section id="videos" class="content-section">
+                {% include 'sections/section5.html' %}
+            </section>
+            <section id="gallery" class="content-section pg">
+                {% include 'sections/section6.html' %}
+            </section>
+            <section id="events" class="content-section">
+                {% include 'sections/section7.html' %}
+            </section>
+            <section class="bg-body-tertiary p-5" style="padding-bottom: 10% !important;">
+                {% include 'sections/section8.html' %}
+            </section>
+        </div>
         <footer class="container-fluid bg-bini text-white py-5 text-center">
             {% include 'partials/footer.html' %}
         </footer>

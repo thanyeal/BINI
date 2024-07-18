@@ -383,7 +383,13 @@
 }
 @media only screen and (max-width: 600px){
     .arrow {
-        display: none;
+        display: block !important;
+    }
+    .left-arrow {
+        left: 1rem;
+    }
+    .right-arrow {
+        right: 1rem;
     }
     .card-container::before,
     .card-container::after {

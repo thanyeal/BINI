@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Author: D.J. Reyes; Polytechnic University of the Philippines, Quezon City Campus">
     <title>BINI | (Not Official Site)</title>
-    <link rel="icon" href="{% static 'media/bini.ico' %}">
+    <link rel="shortcut icon" href="{% static 'media/bini.png' %}" type="icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="https://fonts.googleapis.com/css?family=Figtree" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -15,7 +16,6 @@
     <link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/custom.css' %}" rel="stylesheet">
     <link href="{% static 'css/resp-width.css' %}" rel="stylesheet">
-    <link href="{% static 'css/resp-height.css' %}" rel="stylesheet">
     <link href="{% static 'css/section1.css' %}" rel="stylesheet">
     <link href="{% static 'css/section2.css' %}" rel="stylesheet">
     <link href="{% static 'css/section3.css' %}" rel="stylesheet">
@@ -85,16 +85,11 @@
             var star_w = $('#star-w');
             var bini_one = $('#bini-one');
             var bini_two = $('#bini-two');
-
             $('#slider').on('input change', function() {
                 var value = $(this).val();
-
-                // Calculate scale and opacity based on slider value
-                var scale2 = Math.min(2.5, 1 + value / 50);  // Limit scale2 to a maximum of 2
-                var scale3 = Math.min(3.5, 1 + value / 40);  // Limit scale3 to a maximum of 3
-                var opacity3 = Math.max(0.5, 1 - value / 100); // Limit minimum opacity to 0.5
-
-                // Update styles of the circles
+                var scale2 = Math.min(2.5, 1 + value / 50); 
+                var scale3 = Math.min(3.5, 1 + value / 40); 
+                var opacity3 = Math.max(0.5, 1 - value / 100);
                 if (value > 0) {
                     star_w.hide();
                     star_y.show();
@@ -107,14 +102,11 @@
                     bini_one.addClass('removez');
                     bini_two.addClass('removez');
                 }
-
                 $('#circlez2').css('transform', `scale(${scale2})`);
                 $('#circlez3').css({
                     'transform': `scale(${scale3})`,
                     'opacity': opacity3
                 });
-
-                // Check if slider reached the maximum value
                 if (value == 100) {
                     $('.loader').fadeOut(1000, function() {
                         $('#main-contentz').fadeIn(1000);
@@ -151,36 +143,30 @@
         const page = document.querySelector(".page-num");
         const maxItem = 8;
         let index = 1;
-
-        const pagination = Math.ceil(galleryItems.length * 4 / maxItem); // 4 items per row, multiple rows
+        const pagination = Math.ceil(galleryItems.length * 4 / maxItem);
         console.log(pagination);
-
         prev.addEventListener("click", function () {
             index--;
             check();
             showItems();
         });
-
         next.addEventListener("click", function () {
             index++;
             check();
             showItems();
         });
-
         function check() {
             if (index == pagination) {
                 next.classList.add("disabled");
             } else {
                 next.classList.remove("disabled");
             }
-
             if (index == 1) {
                 prev.classList.add("disabled");
             } else {
                 prev.classList.remove("disabled");
             }
         }
-
         function showItems() {
             for (let i = 0; i < galleryItems.length; i++) {
                 galleryItems[i].classList.remove("show");
@@ -192,7 +178,6 @@
                 page.innerHTML = index;
             }
         }
-
         window.onload = function () {
             showItems();
             check();
@@ -244,12 +229,10 @@
             const cards = document.querySelector('.cards');
             cards.scrollLeft -= 1000;
         });
-
         document.querySelector('.right-arrow').addEventListener('click', () => {
             const cards = document.querySelector('.cards');
             cards.scrollLeft += 1000;
         });
-
         function flipCard(card) {
             card.classList.toggle('flipped');
         }

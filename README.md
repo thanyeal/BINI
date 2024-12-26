@@ -49,7 +49,7 @@ I made this website to demonstrate my skill set as a Frontend Developer and to i
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-I want to thank these resource because this project became possible because of here
+I want to thank these resource because this project became possible because of her.
 
 * [Ms. Juno Sevilla](https://www.behance.net/junosevilla)
 
